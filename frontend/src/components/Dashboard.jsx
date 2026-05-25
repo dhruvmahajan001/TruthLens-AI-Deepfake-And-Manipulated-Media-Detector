@@ -1322,7 +1322,7 @@ export default function Dashboard() {
     startLoader();
     try {
       const res = await axios.post(
-        "http://https://truthlens-ai-deepfake-and-manipulated.onrender.com/api/analysis/analyze",
+        "https://truthlens-ai-deepfake-and-manipulated.onrender.com/api/analysis/analyze",
         {
           inputType: "text",
           content: text,
@@ -1354,7 +1354,7 @@ export default function Dashboard() {
       : "analyze-image";
     try {
       const res = await axios.post(
-        `http://https://truthlens-ai-deepfake-and-manipulated.onrender.com/api/analysis/${endpoint}`,
+        `https://truthlens-ai-deepfake-and-manipulated.onrender.com/api/analysis/${endpoint}`,
         formData,
       );
       setResult(res.data);

@@ -15,7 +15,7 @@ export default function Login() {
     setLoading(true);
     try {
       await axios.post(
-        "http://https://truthlens-ai-deepfake-and-manipulated.onrender.com/api/auth/login",
+        "https://truthlens-ai-deepfake-and-manipulated.onrender.com/api/auth/login",
         {
           email,
           password,
