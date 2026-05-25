@@ -15,14 +15,19 @@ export default function Signup() {
     setError("");
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/auth/signup", {
-        name,
-        email,
-        password,
-      });
+      await axios.post(
+        "http://https://truthlens-ai-deepfake-and-manipulated.onrender.com/api/auth/signup",
+        {
+          name,
+          email,
+          password,
+        },
+      );
       navigate("/login");
     } catch (err) {
-      setError(err.response?.data?.message || "Signup failed. Please try again.");
+      setError(
+        err.response?.data?.message || "Signup failed. Please try again.",
+      );
     } finally {
       setLoading(false);
     }
@@ -105,8 +110,10 @@ export default function Signup() {
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSignup} style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
-
+        <form
+          onSubmit={handleSignup}
+          style={{ display: "flex", flexDirection: "column", gap: "18px" }}
+        >
           {/* Error */}
           {error && (
             <div
@@ -130,7 +137,11 @@ export default function Signup() {
           <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
             <label
               htmlFor="signup-name"
-              style={{ fontSize: "13px", fontWeight: 600, color: "var(--text-secondary)" }}
+              style={{
+                fontSize: "13px",
+                fontWeight: 600,
+                color: "var(--text-secondary)",
+              }}
             >
               Full Name
             </label>
@@ -149,7 +160,11 @@ export default function Signup() {
           <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
             <label
               htmlFor="signup-email"
-              style={{ fontSize: "13px", fontWeight: 600, color: "var(--text-secondary)" }}
+              style={{
+                fontSize: "13px",
+                fontWeight: 600,
+                color: "var(--text-secondary)",
+              }}
             >
               Email Address
             </label>
@@ -168,7 +183,11 @@ export default function Signup() {
           <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
             <label
               htmlFor="signup-password"
-              style={{ fontSize: "13px", fontWeight: 600, color: "var(--text-secondary)" }}
+              style={{
+                fontSize: "13px",
+                fontWeight: 600,
+                color: "var(--text-secondary)",
+              }}
             >
               Password
             </label>
@@ -192,7 +211,10 @@ export default function Signup() {
                         flex: 1,
                         height: "3px",
                         borderRadius: "2px",
-                        background: strength >= level ? strengthColors[strength] : "var(--navy-700)",
+                        background:
+                          strength >= level
+                            ? strengthColors[strength]
+                            : "var(--navy-700)",
                         transition: "background 0.3s ease",
                       }}
                     />
@@ -228,7 +250,9 @@ export default function Signup() {
           >
             {loading ? (
               <span className="loading-dots">
-                <span /><span /><span />
+                <span />
+                <span />
+                <span />
               </span>
             ) : (
               "Create Account →"
@@ -245,11 +269,19 @@ export default function Signup() {
           }}
         >
           <div className="divider" style={{ flex: 1 }} />
-          <span style={{ fontSize: "12px", color: "var(--text-muted)" }}>OR</span>
+          <span style={{ fontSize: "12px", color: "var(--text-muted)" }}>
+            OR
+          </span>
           <div className="divider" style={{ flex: 1 }} />
         </div>
 
-        <p style={{ textAlign: "center", fontSize: "14px", color: "var(--text-muted)" }}>
+        <p
+          style={{
+            textAlign: "center",
+            fontSize: "14px",
+            color: "var(--text-muted)",
+          }}
+        >
           Already have an account?{" "}
           <Link
             to="/login"

@@ -14,10 +14,13 @@ export default function Login() {
     setError("");
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/auth/login", {
-        email,
-        password,
-      });
+      await axios.post(
+        "http://https://truthlens-ai-deepfake-and-manipulated.onrender.com/api/auth/login",
+        {
+          email,
+          password,
+        },
+      );
       navigate("/dashboard");
     } catch (err) {
       setError(err.response?.data?.message || "Invalid email or password.");
@@ -92,8 +95,10 @@ export default function Login() {
         </div>
 
         {/* Form */}
-        <form onSubmit={handleLogin} style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
-
+        <form
+          onSubmit={handleLogin}
+          style={{ display: "flex", flexDirection: "column", gap: "18px" }}
+        >
           {/* Error Message */}
           {error && (
             <div
@@ -117,7 +122,11 @@ export default function Login() {
           <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
             <label
               htmlFor="login-email"
-              style={{ fontSize: "13px", fontWeight: 600, color: "var(--text-secondary)" }}
+              style={{
+                fontSize: "13px",
+                fontWeight: 600,
+                color: "var(--text-secondary)",
+              }}
             >
               Email Address
             </label>
@@ -136,7 +145,11 @@ export default function Login() {
           <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
             <label
               htmlFor="login-password"
-              style={{ fontSize: "13px", fontWeight: 600, color: "var(--text-secondary)" }}
+              style={{
+                fontSize: "13px",
+                fontWeight: 600,
+                color: "var(--text-secondary)",
+              }}
             >
               Password
             </label>
@@ -167,7 +180,9 @@ export default function Login() {
           >
             {loading ? (
               <span className="loading-dots">
-                <span /><span /><span />
+                <span />
+                <span />
+                <span />
               </span>
             ) : (
               "Sign In"
@@ -185,12 +200,20 @@ export default function Login() {
           }}
         >
           <div className="divider" style={{ flex: 1 }} />
-          <span style={{ fontSize: "12px", color: "var(--text-muted)" }}>OR</span>
+          <span style={{ fontSize: "12px", color: "var(--text-muted)" }}>
+            OR
+          </span>
           <div className="divider" style={{ flex: 1 }} />
         </div>
 
         {/* Switch to Signup */}
-        <p style={{ textAlign: "center", fontSize: "14px", color: "var(--text-muted)" }}>
+        <p
+          style={{
+            textAlign: "center",
+            fontSize: "14px",
+            color: "var(--text-muted)",
+          }}
+        >
           Don't have an account?{" "}
           <Link
             to="/signup"
