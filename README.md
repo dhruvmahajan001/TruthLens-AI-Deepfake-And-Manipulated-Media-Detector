@@ -55,5 +55,5 @@ TruthLens AI is a full-stack AI-powered web application that detects fake and ma
 ## 👨‍💻 Author
 **Dhruv Mahajan**
 
-LinkedIn: https://www.linkedin.com/in/dhruv-mahajan6969/
-GitHub: https://github.com/dhruvmahajan001
+- LinkedIn: https://www.linkedin.com/in/dhruv-mahajan6969/
+- GitHub: https://github.com/dhruvmahajan001
