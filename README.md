@@ -32,10 +32,17 @@ TruthLens AI is a full-stack AI-powered web application that detects fake and ma
 - `facebook/bart-large-mnli` for text classification
 - `prithivMLmods/deepfake-detector-model-v1` for deepfake detection
 
+## 📸 Screenshots
+
+### Landing Page
+
+<p align="center">
+  <img src="screenshots/landing-page.png" width="1000"/>
+</p>
+
+
 ## 🌐 Live Demo
-- Frontend: https://truthlens001.netlify.app
-- Backend API: https://truthlens-ai-deepfake-and-manipulated.onrender.com
-- AI Service: https://truthlens-ai-deepfake-and-manipulated-w7i3.onrender.com
+- Live Link: https://truthlens001.netlify.app
 
 ## 📚 Key Learnings
 - Full-stack development
